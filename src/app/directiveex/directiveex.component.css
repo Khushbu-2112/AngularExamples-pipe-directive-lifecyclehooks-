@@ -1,0 +1,28 @@
+label{
+    width: 100%;
+    background-color: rgb(223, 232, 248);
+    color: black;
+    padding: 6px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+p{
+    padding: 10px;
+}
+
+span{
+    margin:4px 10px;
+}
+input{
+    margin: 10px;
+    border-radius: 5px;  
+}
+
+.box{
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px;
+    box-shadow: 2px 2px gray;
+    border: 1px solid rgb(80, 129, 219);
+}

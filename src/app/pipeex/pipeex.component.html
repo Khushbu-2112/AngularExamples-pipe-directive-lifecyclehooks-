@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="box">
+        <label for="">Uppercase Pipe</label>
+        <span>{{title}} -> {{ title | uppercase}}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Lowercase Pipe</label>
+        <span>{{title}} -> {{ title | lowercase }}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Currency Pipe</label>
+        <span>USA:{{ 250.50 | currency:'USD' }}</span><br>
+        <span>India:{{100.00 | currency:'INR'}}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Date Pipe</label>
+        <span> {{today}} -> {{ today | date:'d/M/y' }}</span><br>
+        <span> {{today}} ->{{ today | date:'shortTime' }}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Decimal Pipe</label>
+        <span>454.1547877 -> {{ 454.1547877 | number:'3.4-4' }}</span></div>
+    <br>
+    <div class="box">
+        <label for="">JSON Pipe</label>
+        <span>{{data}} -> {{ data | json }}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Percent Pipe</label>
+        <span>00.541 -> {{ 00.541 | percent }}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Slice Pipe</label>
+        <span>{{days}} -> {{ days | slice:2:4 }}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Pipe Chaining</label>
+        <span>{{today}} -> {{ today | date:'MMM d,y' | uppercase}}</span></div>
+    <br>
+    <div class="box">
+        <label for="">Toggle format</label>
+        <button style="margin: 5px;" class="btn btn-sm btn-primary" (click)="toggleFormat()">Toggle</button>
+        <span>{{ today | date:format }}</span>
+    </div>
+    <br>
+    <div class="box">
+        <label for="">Custom Pipe  (also used in directive) </label>
+        <span>[2,1,10] -> {{ [2,1,10] | custompipe}}</span></div>
+</div>
+
+
+
+

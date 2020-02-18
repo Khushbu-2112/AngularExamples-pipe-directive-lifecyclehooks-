@@ -1,0 +1,35 @@
+<div class="box">
+  <label for="">Attribute Directive example</label>
+  <p appHighlight>I have pink Background hover to see</p>
+</div>
+
+<div class="box">
+  <label for="">Attribute Directive - Pick a highlight color</label>
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+  <p [appHighlight]="color">Highlight me!</p>
+</div>
+
+<div class="box">
+  <label for="">If directive example</label>
+  <p *ngIf="no>10then a ;else b">hi</p><br>
+  &nbsp;&nbsp;Enter no:<input type="number" [(ngModel)]="no">
+  <ng-template #a>&nbsp;&nbsp;Greater then 10</ng-template>
+  <ng-template #b>&nbsp;&nbsp;Lesser then 10</ng-template>
+</div>
+
+<div class="box">
+  <label for="">For directive example</label>
+  <P>Array element printed with for loop: search any number
+  <input type="number" [(ngModel)]="search"></P>
+  <span *ngFor="let i of arr | custompipe:search">{{i}}</span>
+</div>
+
+<div class="box">
+  <label for="">Custom directive example</label>
+  <p *appOdd="condition">Shown when it is falsy</p>
+  <p *appOdd="!condition">Shown when it is truthy</p>
+</div>
