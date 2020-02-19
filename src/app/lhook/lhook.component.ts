@@ -21,14 +21,14 @@ export class lhook implements OnInit {
   ngOnInit() { this.logIt(`OnInit`); }
 
   logIt(msg: string) {
-    this.logger.log(`#${nextId++} ${msg}`);
+    this.logger.log(`${nextId++}) ${msg}`);
   }
 }
 
 
 @Component({
     selector: 'lhook',
-    template: '<p>Now you see my hero, {{name}}</p>',
+    template: '<p>Now you see, {{name}}</p>',
     styles: ['padding:10px']
 })
 // Don't HAVE to mention the Lifecycle Hook interfaces

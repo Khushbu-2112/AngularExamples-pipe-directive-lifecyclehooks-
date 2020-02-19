@@ -1,0 +1,13 @@
+.box{
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px;
+    box-shadow: 3px 3px rgb(179, 176, 176);
+    border: 2px solid rgb(235, 191, 71);
+    padding: 10px;
+    margin: 5px;
+}
+h3{
+    color: rgb(218, 166, 23)
+}

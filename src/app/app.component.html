@@ -1,10 +1,11 @@
 <div class="container">
-  <h2><i>Angular some Example</i></h2>
+  <h2><i>Angular Examples</i></h2>
   <br>
   <div class="row">
-    <div class="col-sm-4"><button class="btn btn-primary" (click)="pipeCode()">Pipe Example</button></div>
-    <div class="col-sm-4"><button class="btn btn-primary"  (click)="lhooksCode()">Lifecycle-Hooks Example</button></div>
-    <div class="col-sm-4"><button class="btn btn-primary" (click)="dirCode()">Directives Example</button></div>
+    <div class="col-sm-3"><button class="btn btn-primary" (click)="pipeCode()">Pipe Example</button></div>
+    <div class="col-sm-3"><button class="btn btn-primary"  (click)="lhooksCode()">Lifecycle-Hooks Example</button></div>
+    <div class="col-sm-3"><button class="btn btn-primary" (click)="dirCode()">Directives Example</button></div>
+    <div class="col-sm-3"><button class="btn btn-primary" (click)="nestedcompCode()">Nested Component Example</button></div>
   </div>
   <hr>
     <p *ngIf="pflag">
@@ -16,4 +17,8 @@
     <p *ngIf="lflag">
       <app-lifecyclehooksex></app-lifecyclehooksex>
     </p>
+    <p *ngIf="nflag">
+      <app-nestedcompex></app-nestedcompex>
+    </p>
+    <footer class="container bg-dark text-light rounded p-2 fixed-bottom">@ Simform</footer>
 </div>

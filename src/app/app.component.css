@@ -2,3 +2,14 @@ button:hover{
     color: rgb(39, 39, 197);
     background-color: white;
 }
+
+button{
+    margin: 3px;
+}
+
+h2{
+    margin-top: 25px;
+    font-family: Lucida Console;
+    color: rgb(153, 13, 13);
+    text-shadow: 1px 1px rgb(236, 41, 41);
+}

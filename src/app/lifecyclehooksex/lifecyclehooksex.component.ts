@@ -4,23 +4,8 @@ import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-lifecyclehooksex',
-  template: `
-  <div class="parent">
-    <h2>Lifecycle Hooks example</h2>
-
-    <button class="btn btn-info" (click)="toggleChild()">
-      {{hasChild ? 'Destroy' : 'Create'}} Element 
-    </button>&nbsp;&nbsp;
-    <button class="btn btn-info" (click)="updateHero()" [hidden]="!hasChild">Update Hero</button>
-
-    <lhook *ngIf="hasChild" [name]="heroName">
-    </lhook>
-
-    <h4>-- Lifecycle Hook Log --</h4>
-    <div *ngFor="let msg of hookLog">{{msg}}</div>
-  </div>
-  `,
-  styles: ['.parent {background: lightgray;padding:10px}'],
+  templateUrl: './lifecyclehooksex.component.html',
+  styleUrls: ['./lifecyclehooksex.component.css'],
   providers:  [ LoggerService ]
 })
 export class LifecyclehooksexComponent{
@@ -28,7 +13,7 @@ export class LifecyclehooksexComponent{
   hasChild = false;
   hookLog: string[];
 
-  heroName = 'Windstorm';
+  heroName = 'xyz';
   private logger: LoggerService;
 
   constructor(logger: LoggerService) {
@@ -39,7 +24,7 @@ export class LifecyclehooksexComponent{
   toggleChild() {
     this.hasChild = !this.hasChild;
     if (this.hasChild) {
-      this.heroName = 'Windstorm';
+      this.heroName = 'XYZ';
       this.logger.clear(); // clear log on create
     }
     this.hookLog = this.logger.logs;
@@ -47,7 +32,7 @@ export class LifecyclehooksexComponent{
   }
 
   updateHero() {
-    this.heroName += '!';
+    this.heroName += '*!';
     this.logger.tick();
   }
 

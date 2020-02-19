@@ -10,6 +10,8 @@ import { LifecyclehooksexComponent } from './lifecyclehooksex/lifecyclehooksex.c
 import { DirectiveexComponent } from './directiveex/directiveex.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { LhookComponent } from './lhook/lhook.component';
+import { NestedcompexComponent } from './nestedcompex/nestedcompex.component';
+import { JokecompComponent } from './jokecomp/jokecomp.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LhookComponent } from './lhook/lhook.component';
     LifecyclehooksexComponent,
     DirectiveexComponent,
     CustompipePipe,
-    LhookComponent
+    LhookComponent,
+    NestedcompexComponent,
+    JokecompComponent
   ],
   imports: [
     BrowserModule,

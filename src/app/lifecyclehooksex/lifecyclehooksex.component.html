@@ -1,0 +1,16 @@
+<div class="box">
+    <h2>Lifecycle Hooks example</h2>
+
+    <button class="btn btn-warning" (click)="toggleChild()">
+      {{hasChild ? 'Destroy' : 'Create'}} Element 
+    </button>
+    <button class="btn btn-warning" (click)="updateHero()" [hidden]="!hasChild">Update Element</button>
+
+    <lhook *ngIf="hasChild" [name]="heroName">
+    </lhook>
+
+    <h5>Lifecycle Hook Log </h5>
+    <hr>
+    <div *ngFor="let msg of hookLog">{{msg}}</div>
+  </div>
+  <br><br>
