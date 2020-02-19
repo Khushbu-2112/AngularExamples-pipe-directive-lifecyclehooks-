@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DirectiveexComponent implements OnInit {
 
   constructor() { }
+  search:any='';
+  condition:any='';
 
   ngOnInit() {
   }
