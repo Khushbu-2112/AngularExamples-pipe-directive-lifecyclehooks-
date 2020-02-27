@@ -1,4 +1,4 @@
-[Demo](https://khushbu-2112.github.io/AngularExamples/pipes)
+[Demo](https://khushbu-2112.github.io/AngularExamples/)
 # Directiveexample
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
