@@ -12,6 +12,13 @@ import { CustompipePipe } from './custompipe.pipe';
 import { LhookComponent } from './lhook/lhook.component';
 import { NestedcompexComponent } from './nestedcompex/nestedcompex.component';
 import { JokecompComponent } from './jokecomp/jokecomp.component';
+import { InterceptorexComponent } from './interceptorex/interceptorex.component';
+import { MyInterceptor } from './myinterceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
+import { HttpuseComponent } from './httpuse/httpuse.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { RecordsService } from './records.service';
 
 @NgModule({
   declarations: [
@@ -24,14 +31,22 @@ import { JokecompComponent } from './jokecomp/jokecomp.component';
     CustompipePipe,
     LhookComponent,
     NestedcompexComponent,
-    JokecompComponent
+    JokecompComponent,
+    InterceptorexComponent,
+    HttpuseComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RecordsService,{
+    provide: HTTP_INTERCEPTORS,
+    useClass: MyInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

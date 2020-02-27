@@ -1,0 +1,9 @@
+<h2>Use of HttpClient in service</h2>
+<div class="box" *ngFor="let d of data">
+  <label for="">Name:</label>{{d.name}}
+  <br>
+  <label for="">Email:</label>{{d.email}}
+  <br>
+  <a href="https://www.google.com/maps/@{{d.address.geo.lat}},{{d.address.geo.lng}},5z">Locate</a>
+</div>
+

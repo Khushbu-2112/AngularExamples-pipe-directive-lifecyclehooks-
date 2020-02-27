@@ -2,13 +2,19 @@
   <h2><i>Angular Examples</i></h2>
   <br>
   <div class="row">
-    <div class="col-sm-3"><button class="btn btn-primary" (click)="pipeCode()">Pipe Example</button></div>
-    <div class="col-sm-3"><button class="btn btn-primary"  (click)="lhooksCode()">Lifecycle-Hooks Example</button></div>
-    <div class="col-sm-3"><button class="btn btn-primary" (click)="dirCode()">Directives Example</button></div>
-    <div class="col-sm-3"><button class="btn btn-primary" (click)="nestedcompCode()">Nested Component Example</button></div>
+    <button class="btn btn-primary" routerLink="pipes">Pipe Example</button>
+    <button class="btn btn-primary"  routerLink="lifecyclehooks">Lifecycle-Hooks Example</button>
+    <button class="btn btn-primary" routerLink="directives">Directives Example</button>
+    <button class="btn btn-primary" routerLink="nestedcomponent">Nested Component Example</button>
+    <!-- <button class="btn btn-primary" (click)="pipeCode()">Pipe Example</button>
+    <button class="btn btn-primary"  (click)="lhooksCode()">Lifecycle-Hooks Example</button>
+    <button class="btn btn-primary" (click)="dirCode()">Directives Example</button>
+    <button class="btn btn-primary" (click)="nestedcompCode()">Nested Component Example</button> -->
+    <button class="btn btn-primary" routerLink="http">Http Example</button>
+    <button class="btn btn-primary" routerLink="interceptor">Interceptor Example</button>
   </div>
   <hr>
-    <p *ngIf="pflag">
+    <!-- <p *ngIf="pflag">
       <app-pipeex></app-pipeex>
     </p>
     <p *ngIf="dflag">
@@ -19,6 +25,7 @@
     </p>
     <p *ngIf="nflag">
       <app-nestedcompex></app-nestedcompex>
-    </p>
-    <footer class="container bg-dark text-light rounded p-2 fixed-bottom">@ Simform</footer>
+    </p> -->
+    <router-outlet></router-outlet>
+    <footer class="container bg-dark text-light rounded p-2 fixed-bottom">KRR</footer>
 </div>
